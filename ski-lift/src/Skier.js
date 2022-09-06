@@ -1,5 +1,23 @@
 class Skier {
+  constructor(name, hasLiftTicket) {
+    this.name = name;
+    this.hasLiftTicket = hasLiftTicket;
+    this.skillLevel = 1;
+    this.nextSlope = 'green circle';
+  }
 
+  takeLesson() {
+    this.skillLevel++;
+  }
+
+  pickSlope() {
+    if (this.skillLevel >= 5) {
+      return this.nextSlope = 'black diamond';
+    }
+    if (this.skillLevel >= 3) {
+      return this.nextSlope = 'blue square';
+    }
+  }
 }
 
 module.exports = Skier;
