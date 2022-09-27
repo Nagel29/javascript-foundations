@@ -74,7 +74,7 @@ describe('Planet', function() {
     assert.deepEqual(planet.calculateDistance(otherPlanet), Math.sqrt(300));
   });
 
-  it.skip('should be able to calculate the distance between itself and different planet', function() {
+  it('should be able to calculate the distance between itself and different planet', function() {
     var initCoords = { x: 0, y: 0, z: 0 };
     var newCoords = { x: 5, y: 5, z: 5 };
     var planet = new Planet({ name: 'F2', coordinates: initCoords });
@@ -83,7 +83,7 @@ describe('Planet', function() {
     assert.deepEqual(planet.calculateDistance(otherPlanet), Math.sqrt(75));
   });
 
-  it.skip('should be able to refuel a ship', function() {
+  it('should be able to refuel a ship', function() {
     var planet = new Planet({ name: 'F2' });
     var captain = new Being('Will', 'human');
     var fighter = new Ship(
@@ -102,7 +102,7 @@ describe('Planet', function() {
     assert.equal(fighter.fuel, fighter.fuelCapacity);
   });
 
-  it.skip('should not be able to send a ship to another planet if it is has no fuel', function() {
+  it('should not be able to send a ship to another planet if it is has no fuel', function() {
     var planet = new Planet({ name: 'F2', coordinates: { x: 0, y: 0, z: 0 } });
     var otherPlanet = new Planet({ name: 'M2', coordinates: { x: 1, y: 1, z: 1 }});
     var captain = new Being('Will', 'human');
@@ -130,7 +130,7 @@ describe('Planet', function() {
     assert.equal(result, "Clearance denied: Cannot fly without fuel")
   });
 
-  it.skip('should be able send a ship to another planet', function() {
+  it('should be able send a ship to another planet', function() {
     var planet = new Planet({ name: 'F2', coordinates: { x: 0, y: 0, z: 0 } });
     var otherPlanet = new Planet({ name: 'M2', coordinates: { x: 1, y: 1, z: 1 }});
     var captain = new Being('Will', 'human');
